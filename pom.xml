@@ -8,11 +8,11 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.panda</groupId>
-	<artifactId>diary</artifactId>
+	<groupId>com.website</groupId>
+	<artifactId>bazmen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>diary</name>
-	<description>Diary Web App</description>
+	<name>bazmen</name>
+	<description>BazmenTekstil Web Site</description>
 	<packaging>war</packaging>
 
 	<properties>
