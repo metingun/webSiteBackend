@@ -35,6 +35,16 @@ public class ReferancesController {
         }
     }
 
+    @RequestMapping(value = "/getAllData/language={language}", method = RequestMethod.GET)
+    public ResponseModel getAllData(@PathVariable String language) {
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(referancesService.getAllData(language), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
     @RequestMapping(value = "/deleteData/{referanceId}", method = RequestMethod.GET)
     public ResponseModel deleteData(@PathVariable int referanceId) {
         try {

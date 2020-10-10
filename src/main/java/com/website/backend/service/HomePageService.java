@@ -19,8 +19,8 @@ public class HomePageService {
     }
 
     public String updateHomePageData(HomePageModel homePageModel) {
-        homePageRepo.delete(homePageRepo.findAll().get(0));
         homePageRepo.save(homePageModel);
+        homePageRepo.delete(homePageRepo.findAll().get(0));
         return "Updated Successfully";
     }
 

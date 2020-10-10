@@ -19,8 +19,8 @@ public class ContactService {
     }
 
     public String updateContact(ContactModel contactModel) {
-        contactRepo.delete(contactRepo.findAll().get(0));
         contactRepo.save(contactModel);
+        contactRepo.delete(contactRepo.findAll().get(0));
         return "Updated Successfully";
     }
 

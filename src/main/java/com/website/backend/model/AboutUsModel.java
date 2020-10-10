@@ -11,26 +11,92 @@ public class AboutUsModel {
     @Column(length = 500)
     private String missionPic;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String missionComment;
 
     @Column(length = 500)
     private String missionSpeakerName;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String missionSpeak;
+
+    @Column(length = 1000)
+    private String missionCommentEn;
+
+    @Column(length = 500)
+    private String missionSpeakerNameEn;
+
+    @Column(length = 1000)
+    private String missionSpeakEn;
 
     @Column(length = 500)
     private String visionPic;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String visionComment;
 
     @Column(length = 500)
     private String visionSpeakerName;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String visionSpeak;
+
+    @Column(length = 1000)
+    private String visionCommentEn;
+
+    @Column(length = 500)
+    private String visionSpeakerNameEn;
+
+    @Column(length = 1000)
+    private String visionSpeakEn;
+
+    public String getMissionCommentEn() {
+        return missionCommentEn;
+    }
+
+    public void setMissionCommentEn(String missionCommentEn) {
+        this.missionCommentEn = missionCommentEn;
+    }
+
+    public String getMissionSpeakerNameEn() {
+        return missionSpeakerNameEn;
+    }
+
+    public void setMissionSpeakerNameEn(String missionSpeakerNameEn) {
+        this.missionSpeakerNameEn = missionSpeakerNameEn;
+    }
+
+    public String getMissionSpeakEn() {
+        return missionSpeakEn;
+    }
+
+    public void setMissionSpeakEn(String missionSpeakEn) {
+        this.missionSpeakEn = missionSpeakEn;
+    }
+
+    public String getVisionCommentEn() {
+        return visionCommentEn;
+    }
+
+    public void setVisionCommentEn(String visionCommentEn) {
+        this.visionCommentEn = visionCommentEn;
+    }
+
+    public String getVisionSpeakerNameEn() {
+        return visionSpeakerNameEn;
+    }
+
+    public void setVisionSpeakerNameEn(String visionSpeakerNameEn) {
+        this.visionSpeakerNameEn = visionSpeakerNameEn;
+    }
+
+    public String getVisionSpeakEn() {
+        return visionSpeakEn;
+    }
+
+    public void setVisionSpeakEn(String visionSpeakEn) {
+        this.visionSpeakEn = visionSpeakEn;
+    }
 
     public long getId() {
         return id;

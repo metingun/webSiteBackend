@@ -12,6 +12,9 @@ public class ContactModel {
     private String address;
 
     @Column(length = 500)
+    private String addressEn;
+
+    @Column(length = 500)
     private String mail;
 
     @Column(length = 500)
@@ -25,6 +28,14 @@ public class ContactModel {
 
     @Column(length = 500)
     private String facebook;
+
+    public String getAddressEn() {
+        return addressEn;
+    }
+
+    public void setAddressEn(String addressEn) {
+        this.addressEn = addressEn;
+    }
 
     public long getId() {
         return id;

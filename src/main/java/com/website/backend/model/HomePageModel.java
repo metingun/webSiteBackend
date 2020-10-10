@@ -21,13 +21,25 @@ public class HomePageModel {
     private String bannerTitle;
 
     @Column
+    private String bannerTitleEn;
+
+    @Column
     private String bannerSubtitle;
+
+    @Column
+    private String bannerSubtitleEn;
 
     @Column
     private String bannerButtonText;
 
     @Column
     private String title1;
+
+    @Column
+    private String bannerButtonTextEn;
+
+    @Column
+    private String title1En;
 
     @Column(length = 500)
     private String pic1;
@@ -40,6 +52,9 @@ public class HomePageModel {
 
     @Column
     private String newSeasonTitle;
+
+    @Column
+    private String newSeasonTitleEn;
 
     @Column(length = 500)
     private String newSeasonPic1;
@@ -64,6 +79,46 @@ public class HomePageModel {
 
     @Column(length = 500)
     private String newSeasonPic8;
+
+    public String getBannerTitleEn() {
+        return bannerTitleEn;
+    }
+
+    public void setBannerTitleEn(String bannerTitleEn) {
+        this.bannerTitleEn = bannerTitleEn;
+    }
+
+    public String getBannerSubtitleEn() {
+        return bannerSubtitleEn;
+    }
+
+    public void setBannerSubtitleEn(String bannerSubtitleEn) {
+        this.bannerSubtitleEn = bannerSubtitleEn;
+    }
+
+    public String getBannerButtonTextEn() {
+        return bannerButtonTextEn;
+    }
+
+    public void setBannerButtonTextEn(String bannerButtonTextEn) {
+        this.bannerButtonTextEn = bannerButtonTextEn;
+    }
+
+    public String getTitle1En() {
+        return title1En;
+    }
+
+    public void setTitle1En(String title1En) {
+        this.title1En = title1En;
+    }
+
+    public String getNewSeasonTitleEn() {
+        return newSeasonTitleEn;
+    }
+
+    public void setNewSeasonTitleEn(String newSeasonTitleEn) {
+        this.newSeasonTitleEn = newSeasonTitleEn;
+    }
 
     public long getId() {
         return id;

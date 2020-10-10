@@ -14,8 +14,19 @@ public class ReferancesModel {
     @Column(length = 500)
     private String companyName;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String comment;
+
+    @Column(length = 1000)
+    private String language;
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
     public long getId() {
         return id;

@@ -11,5 +11,6 @@ public interface CollectionRepo extends JpaRepository<CollectionModel, Long> {
     CollectionModel findById(long productId);
     CollectionModel findByProductName(String productName);
 
-    List<CollectionModel> findBySex(String sex);
+    List<CollectionModel> findBySexAndLanguage(String sex,String language);
+    List<CollectionModel> findAllByLanguage(String language);
 }

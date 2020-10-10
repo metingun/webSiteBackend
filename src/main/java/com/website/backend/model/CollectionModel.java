@@ -17,14 +17,25 @@ public class CollectionModel {
     @Column(length = 500)
     private String productName;
 
-    @Column(length = 500)
+    @Column(length = 50)
     private String sex;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String comment;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String productProperties;
+
+    @Column(length = 50)
+    private String language;
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
     public long getId() {
         return id;

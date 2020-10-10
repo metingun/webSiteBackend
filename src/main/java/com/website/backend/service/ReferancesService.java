@@ -28,4 +28,8 @@ public class ReferancesService {
     public List<ReferancesModel> getAllData() {
         return referancesRepo.findAll();
     }
+
+    public List<ReferancesModel> getAllData(String language) {
+        return referancesRepo.findAllByLanguage(language);
+    }
 }

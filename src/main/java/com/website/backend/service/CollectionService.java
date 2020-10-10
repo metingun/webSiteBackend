@@ -28,21 +28,27 @@ public class CollectionService {
     public List<CollectionModel> getAllData() {
         return collectionRepo.findAll();
     }
+
+    public List<CollectionModel> getAllData(String language) {
+        return collectionRepo.findAllByLanguage(language);
+    }
+
     public CollectionModel getDataById(int id) {
         return collectionRepo.findById(id);
     }
-    public List<CollectionModel> getDataBySex(int sexId) {
-        switch (sexId){
+
+    public List<CollectionModel> getDataBySex(int sexId, String language) {
+        switch (sexId) {
             case 0:
-                return getAllData();
+                return getAllData(language);
             case 1:
-                return collectionRepo.findBySex("Woman");
+                return collectionRepo.findBySexAndLanguage("Woman", language);
 
             case 2:
-                return collectionRepo.findBySex("Man");
+                return collectionRepo.findBySexAndLanguage("Man", language);
 
             case 3:
-                return collectionRepo.findBySex("Kids");
+                return collectionRepo.findBySexAndLanguage("Kids", language);
 
         }
         return null;

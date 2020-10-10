@@ -19,8 +19,8 @@ public class AboutUsService {
     }
 
     public String updateAboutUs(AboutUsModel aboutUsModel) {
-        aboutUsRepo.delete(aboutUsRepo.findAll().get(0));
         aboutUsRepo.save(aboutUsModel);
+        aboutUsRepo.delete(aboutUsRepo.findAll().get(0));
         return "Updated Successfully";
     }
 
