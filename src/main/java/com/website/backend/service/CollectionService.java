@@ -28,4 +28,23 @@ public class CollectionService {
     public List<CollectionModel> getAllData() {
         return collectionRepo.findAll();
     }
+    public CollectionModel getDataById(int id) {
+        return collectionRepo.findById(id);
+    }
+    public List<CollectionModel> getDataBySex(int sexId) {
+        switch (sexId){
+            case 0:
+                return getAllData();
+            case 1:
+                return collectionRepo.findBySex("Woman");
+
+            case 2:
+                return collectionRepo.findBySex("Man");
+
+            case 3:
+                return collectionRepo.findBySex("Kids");
+
+        }
+        return null;
+    }
 }

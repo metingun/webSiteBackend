@@ -35,6 +35,36 @@ public class CollectionController {
         }
     }
 
+    /*
+    SEXID
+
+    all--0
+    woman--1
+    man--2
+    kids--3
+    */
+    @RequestMapping(value = "/getDataBySex/{sexId}", method = RequestMethod.GET)
+    public ResponseModel getDataBySex(@PathVariable int sexId) {
+
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(collectionService.getDataBySex(sexId), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/getDataById/{id}", method = RequestMethod.GET)
+    public ResponseModel getDataById(@PathVariable int id) {
+
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(collectionService.getDataById(id), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
     @RequestMapping(value = "/deleteData/{productId}", method = RequestMethod.GET)
     public ResponseModel deleteData(@PathVariable long productId) {
         try {

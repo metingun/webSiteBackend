@@ -12,7 +12,13 @@ public class CollectionModel {
     private String pic1;
 
     @Column(length = 500)
+    private String pic2;
+
+    @Column(length = 500)
     private String productName;
+
+    @Column(length = 500)
+    private String sex;
 
     @Column(length = 500)
     private String comment;
@@ -58,5 +64,21 @@ public class CollectionModel {
 
     public void setProductProperties(String productProperties) {
         this.productProperties = productProperties;
+    }
+
+    public String getPic2() {
+        return pic2;
+    }
+
+    public void setPic2(String pic2) {
+        this.pic2 = pic2;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }

@@ -1,5 +1,4 @@
-/*
-package com.panda.diary.config;
+package com.website.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,4 +28,3 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-*/

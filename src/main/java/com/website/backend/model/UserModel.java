@@ -15,7 +15,7 @@ public class UserModel {
     private String password;
 
     @Column
-    private int session;
+    private String session="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDAxIiwic2NvcGVzIjoiQ1NBX1RSIiwiaWF0IjoxNTk4NDI2NDM1LCJleHAiOjE1OTg0NDQ0MzV9.NIm0x8AB4ZNJLlP4s_PNkcyKm3PaJjEGlNP0Yl7MJaQ";
 
     public long getId() {
         return id;
@@ -41,11 +41,11 @@ public class UserModel {
         this.password = password;
     }
 
-    public int getSession() {
+    public String getSession() {
         return session;
     }
 
-    public void setSession(int session) {
+    public void setSession(String session) {
         this.session = session;
     }
 }

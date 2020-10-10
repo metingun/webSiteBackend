@@ -61,11 +61,11 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/getSession", method = RequestMethod.GET)
-    public ResponseModel getSession() {
+    @RequestMapping(value = "/getSession", method = RequestMethod.POST)
+    public ResponseModel getSession(@RequestBody UserModel userModel) {
         try {
             return ResponseModel
-                    .createSuccessResponseWithData(userService.getSession(), false);
+                    .createSuccessResponseWithData(userService.getSession(userModel).getSession(), false);
         } catch (Exception e) {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }

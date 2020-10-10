@@ -1,5 +1,4 @@
-/*
-package com.panda.diary.config;
+package com.website.backend.config;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -45,4 +44,3 @@ public class CorsFilter implements Filter {
     }
 }
 
-*/

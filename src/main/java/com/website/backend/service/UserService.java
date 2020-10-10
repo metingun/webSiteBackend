@@ -31,24 +31,22 @@ public class UserService {
         }
     }
 
-    public String login(UserModel userModel) {
+    public UserModel login(UserModel userModel) {
         UserModel user = userRepo.findByUserNameAndPassword(userModel.getUserName(),userModel.getPassword());
         if (user!=null) {
-            sessionChange(1);
-            return "Giriş Başarılı";
+            return userModel;
         } else {
             return null;
         }
     }
 
-    public void sessionChange(int activity) {
+    public void sessionChange(String activity) {
         UserModel user=userRepo.findAll().get(0);
         user.setSession(activity);
         userRepo.save(user);
     }
 
-    public int getSession() {
-        return userRepo.findAll().get(0).getSession();
+    public UserModel getSession(UserModel userModel) {
+        return login(userModel);
     }
-
 }
