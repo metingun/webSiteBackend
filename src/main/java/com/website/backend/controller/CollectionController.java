@@ -43,12 +43,12 @@ public class CollectionController {
     man--2
     kids--3
     */
-    @RequestMapping(value = "/getDataBySex/{sexId}", method = RequestMethod.GET)
-    public ResponseModel getDataBySex(@PathVariable int sexId) {
+    @RequestMapping(value = "/getDataBySex/{sexId}/language={language}", method = RequestMethod.GET)
+    public ResponseModel getDataBySex(@PathVariable int sexId,@PathVariable String language) {
 
         try {
             return ResponseModel
-                    .createSuccessResponseWithData(collectionService.getDataBySex(sexId), false);
+                    .createSuccessResponseWithData(collectionService.getDataBySex(sexId,language), false);
         } catch (Exception e) {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }
