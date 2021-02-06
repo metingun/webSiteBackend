@@ -5,16 +5,16 @@ import javax.persistence.*;
 @Entity
 public class HomePageModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String bannerPic1;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String bannerPic2;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String bannerPic3;
 
     @Column
@@ -41,13 +41,13 @@ public class HomePageModel {
     @Column
     private String title1En;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String pic1;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String pic2;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String pic3;
 
     @Column
@@ -56,28 +56,28 @@ public class HomePageModel {
     @Column
     private String newSeasonTitleEn;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic1;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic2;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic3;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic4;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic5;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic6;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic7;
 
-    @Column(length = 500)
+    @Column(length = 1000)
     private String newSeasonPic8;
 
     public String getBannerTitleEn() {

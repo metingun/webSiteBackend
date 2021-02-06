@@ -3,7 +3,7 @@ package com.website.backend.model;
 import javax.persistence.*;
 
 @Entity
-public class ReferancesModel {
+public class CertificatesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -12,12 +12,12 @@ public class ReferancesModel {
     private String pic1;
 
     @Column(length = 500)
-    private String companyName;
+    private String certificateName;
 
     @Column(length = 1000)
     private String comment;
 
-    @Column(length = 1000)
+    @Column(length = 50)
     private String language;
 
     public String getLanguage() {
@@ -44,12 +44,12 @@ public class ReferancesModel {
         this.pic1 = pic1;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getCertificateName() {
+        return certificateName;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setCertificateName(String certificateName) {
+        this.certificateName = certificateName;
     }
 
     public String getComment() {
