@@ -1,5 +1,6 @@
 package com.website.backend.controller;
 
+import com.website.backend.model.CollectionModel;
 import com.website.backend.model.ReferancesModel;
 import com.website.backend.model.ResponseModel;
 import com.website.backend.service.ReferancesService;
@@ -50,6 +51,27 @@ public class ReferancesController {
         try {
             return ResponseModel
                     .createSuccessResponseWithData(referancesService.deleteReferance(referanceId), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/getDataById/{id}", method = RequestMethod.GET)
+    public ResponseModel getDataById(@PathVariable int id) {
+
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(referancesService.getDataById(id), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public ResponseModel update(@RequestBody ReferancesModel referancesModel) {
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(referancesService.update(referancesModel), false);
         } catch (Exception e) {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }

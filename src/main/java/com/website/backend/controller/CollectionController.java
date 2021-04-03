@@ -74,4 +74,14 @@ public class CollectionController {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }
     }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public ResponseModel update(@RequestBody CollectionModel collectionModel) {
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(collectionService.update(collectionModel), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
 }

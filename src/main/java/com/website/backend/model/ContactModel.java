@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class ContactModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long id;
 
     @Column(length = 500)

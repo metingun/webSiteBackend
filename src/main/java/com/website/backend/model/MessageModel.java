@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class MessageModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long id;
 
     @Column

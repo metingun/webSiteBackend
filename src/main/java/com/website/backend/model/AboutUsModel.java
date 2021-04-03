@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class AboutUsModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private long id;
 
     @Column(length = 500)

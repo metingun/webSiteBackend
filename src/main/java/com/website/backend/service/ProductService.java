@@ -27,6 +27,19 @@ public class ProductService {
         return "Deleted Successfully";
     }
 
+    public ProductModel getDataById(int id) {
+        return productRepo.findById(id);
+    }
+
+    public String update(ProductModel productModel) {
+        ProductModel product=productRepo.findById(productModel.getId());
+        product.setProductTitle(productModel.getProductTitle());
+        product.setComment(productModel.getComment());
+        product.setPic1(productModel.getPic1());
+        productRepo.save(product);
+        return "200";
+    }
+
     public List<ProductModel> getAllData() {
         return productRepo.findAll();
     }

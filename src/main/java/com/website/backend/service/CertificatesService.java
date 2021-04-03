@@ -25,6 +25,19 @@ public class CertificatesService {
         return "Deleted Successfully";
     }
 
+    public String update(CertificatesModel certificatesModel) {
+        CertificatesModel certificate=certificatesRepo.findById(certificatesModel.getId());
+        certificate.setCertificateName(certificatesModel.getCertificateName());
+        certificate.setComment(certificatesModel.getComment());
+        certificate.setPic1(certificatesModel.getPic1());
+        certificatesRepo.save(certificate);
+        return "200";
+    }
+
+    public CertificatesModel getDataById(int id) {
+        return certificatesRepo.findById(id);
+    }
+
     public List<CertificatesModel> getAllData() {
         return certificatesRepo.findAll();
     }

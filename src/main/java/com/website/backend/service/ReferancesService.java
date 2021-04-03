@@ -25,6 +25,19 @@ public class ReferancesService {
         return "Deleted Successfully";
     }
 
+    public ReferancesModel getDataById(int id) {
+        return referancesRepo.findById(id);
+    }
+
+    public String update(ReferancesModel referancesModel) {
+        ReferancesModel referance=referancesRepo.findById(referancesModel.getId());
+        referance.setComment(referancesModel.getComment());
+        referance.setCompanyName(referancesModel.getCompanyName());
+        referance.setPic1(referancesModel.getPic1());
+        referancesRepo.save(referance);
+        return "200";
+    }
+
     public List<ReferancesModel> getAllData() {
         return referancesRepo.findAll();
     }

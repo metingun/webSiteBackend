@@ -1,6 +1,7 @@
 package com.website.backend.controller;
 
 import com.website.backend.model.CertificatesModel;
+import com.website.backend.model.ReferancesModel;
 import com.website.backend.model.ResponseModel;
 import com.website.backend.service.CertificatesService;
 import org.springframework.web.bind.annotation.*;
@@ -50,6 +51,27 @@ public class CertificatesController {
         try {
             return ResponseModel
                     .createSuccessResponseWithData(certificatesService.deleteCertificate(certificatesId), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/getDataById/{id}", method = RequestMethod.GET)
+    public ResponseModel getDataById(@PathVariable int id) {
+
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(certificatesService.getDataById(id), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public ResponseModel update(@RequestBody CertificatesModel certificatesModel) {
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(certificatesService.update(certificatesModel), false);
         } catch (Exception e) {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }

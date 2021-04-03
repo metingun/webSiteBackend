@@ -1,5 +1,6 @@
 package com.website.backend.controller;
 
+import com.website.backend.model.CertificatesModel;
 import com.website.backend.model.ProductModel;
 import com.website.backend.model.ReferancesModel;
 import com.website.backend.model.ResponseModel;
@@ -52,6 +53,27 @@ public class ProductController {
         try {
             return ResponseModel
                     .createSuccessResponseWithData(productService.deleteProduct(productId), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/getDataById/{id}", method = RequestMethod.GET)
+    public ResponseModel getDataById(@PathVariable int id) {
+
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(productService.getDataById(id), false);
+        } catch (Exception e) {
+            return ResponseModel.createErrorResponseWithErrorMessage(e);
+        }
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public ResponseModel update(@RequestBody ProductModel productModel) {
+        try {
+            return ResponseModel
+                    .createSuccessResponseWithData(productService.update(productModel), false);
         } catch (Exception e) {
             return ResponseModel.createErrorResponseWithErrorMessage(e);
         }

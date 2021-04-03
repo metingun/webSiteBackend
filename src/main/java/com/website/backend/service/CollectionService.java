@@ -25,6 +25,17 @@ public class CollectionService {
         return "Deleted Successfully";
     }
 
+    public String update(CollectionModel collectionModel) {
+        CollectionModel collection=collectionRepo.findById(collectionModel.getId());
+        collection.setPic1(collectionModel.getPic1());
+        collection.setPic2(collectionModel.getPic2());
+        collection.setComment(collectionModel.getComment());
+        collection.setProductName(collectionModel.getProductName());
+        collection.setProductProperties(collectionModel.getProductProperties());
+        collectionRepo.save(collection);
+        return "200";
+    }
+
     public List<CollectionModel> getAllData() {
         return collectionRepo.findAll();
     }
